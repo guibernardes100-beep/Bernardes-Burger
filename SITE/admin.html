@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Painel Administrativo | Bernardes Burger</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <header class="topo-admin">
+
+    <div>
+      <h1>Bernardes Burger</h1>
+      <p>Painel Administrativo</p>
+    </div>
+
+    <a href="index.html">
+      Ver site
+    </a>
+
+  </header>
+
+
+  <main class="container-admin">
+
+    <section class="card-admin">
+
+      <h2>Adicionar / Editar produto</h2>
+
+      <form id="formProduto">
+
+        <input
+          type="hidden"
+          id="produtoId"
+        >
+
+
+        <div class="grupo">
+
+          <label for="nome">
+            Nome do produto
+          </label>
+
+          <input
+            type="text"
+            id="nome"
+            placeholder="Ex: X-Bacon"
+            required
+          >
+
+        </div>
+
+
+        <div class="grupo">
+
+          <label for="descricao">
+            Descrição
+          </label>
+
+          <textarea
+            id="descricao"
+            placeholder="Ingredientes do produto"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <div class="linha">
+
+          <div class="grupo">
+
+            <label for="preco">
+              Preço
+            </label>
+
+            <input
+              type="number"
+              id="preco"
+              step="0.01"
+              min="0"
+              placeholder="15.00"
+              required
+            >
+
+          </div>
+
+
+          <div class="grupo">
+
+            <label for="categoria">
+              Categoria
+            </label>
+
+            <select
+              id="categoria"
+              required
+            >
+
+              <option value="tradicionais">
+                Tradicionais
+              </option>
+
+              <option value="artesanais">
+                Artesanais
+              </option>
+
+              <option value="porcoes">
+                Porções
+              </option>
+
+              <option value="bebidas">
+                Bebidas
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div class="grupo">
+
+          <label for="imagem">
+            URL da imagem
+          </label>
+
+          <input
+            type="url"
+            id="imagem"
+            placeholder="https://..."
+            required
+          >
+
+        </div>
+
+
+        <div class="grupo checkbox-grupo">
+
+          <input
+            type="checkbox"
+            id="ativo"
+            checked
+          >
+
+          <label for="ativo">
+            Produto ativo no site
+          </label>
+
+        </div>
+
+
+        <div class="acoes-form">
+
+          <button
+            type="submit"
+            class="btn-salvar"
+          >
+            Salvar produto
+          </button>
+
+
+          <button
+            type="button"
+            id="btnCancelar"
+            class="btn-cancelar"
+          >
+            Cancelar edição
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <section class="card-admin">
+
+      <div class="titulo-lista">
+
+        <div>
+          <h2>Produtos cadastrados</h2>
+
+          <p>
+            Gerencie os produtos do seu cardápio.
+          </p>
+        </div>
+
+        <span id="contadorProdutos">
+          0 produtos
+        </span>
+
+      </div>
+
+
+      <div class="filtros">
+
+        <input
+          type="text"
+          id="buscaProduto"
+          placeholder="Buscar produto..."
+        >
+
+
+        <select id="filtroCategoria">
+
+          <option value="todos">
+            Todas as categorias
+          </option>
+
+          <option value="tradicionais">
+            Tradicionais
+          </option>
+
+          <option value="artesanais">
+            Artesanais
+          </option>
+
+          <option value="porcoes">
+            Porções
+          </option>
+
+          <option value="bebidas">
+            Bebidas
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div
+        id="listaProdutos"
+        class="lista-produtos"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <div
+    id="notificacaoAdmin"
+    class="notificacao-admin"
+  ></div>
+
+
+  <script src="admin.js"></script>
+
+</body>
+</html>

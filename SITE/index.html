@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Bernardes Burger | Sabor que representa!</title>
+
+  <meta
+    name="description"
+    content="Bernardes Burger - Hambúrgueres, porções e bebidas. Faça seu pedido pelo WhatsApp."
+  >
+
+  <!-- FONTE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <!-- =========================================
+       CABEÇALHO
+  ========================================== -->
+
+  <header class="header">
+
+    <a href="#inicio" class="logo">
+      BERNARDES
+      <span>BURGER</span>
+    </a>
+
+    <nav class="nav">
+
+      <a href="#inicio">
+        Início
+      </a>
+
+      <a href="#cardapio">
+        Cardápio
+      </a>
+
+      <a href="#contato">
+        Contato
+      </a>
+
+    </nav>
+
+
+    <button
+      class="botao-sacola"
+      id="botaoSacola"
+      type="button"
+    >
+
+      🛒 Sacola
+
+      <span id="quantidadeSacola">
+        0
+      </span>
+
+    </button>
+
+  </header>
+
+
+  <!-- =========================================
+       HERO / INÍCIO
+  ========================================== -->
+
+  <main>
+
+    <section
+      class="hero"
+      id="inicio"
+    >
+
+      <div class="hero-conteudo">
+
+        <div class="status">
+          <span></span>
+          PEDIDOS ABERTOS
+        </div>
+
+
+        <h1>
+          Sabor que
+          <span>representa!</span>
+        </h1>
+
+
+        <p>
+          Hambúrgueres preparados para deixar
+          seu pedido ainda mais especial.
+          Escolha seus favoritos e peça pelo WhatsApp.
+        </p>
+
+
+        <div class="hero-botoes">
+
+          <a
+            href="#cardapio"
+            class="btn-principal"
+          >
+            🍔 Ver cardápio
+          </a>
+
+
+          <a
+            href="https://wa.me/5511918526711"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-secundario"
+          >
+            📱 WhatsApp
+          </a>
+
+        </div>
+
+
+        <div class="hero-info">
+
+          <div>
+            <strong>🍔</strong>
+
+            <span>
+              Hambúrgueres
+              <small>Tradicionais e artesanais</small>
+            </span>
+          </div>
+
+
+          <div>
+            <strong>🛵</strong>
+
+            <span>
+              Entrega
+              <small>Peça pelo WhatsApp</small>
+            </span>
+          </div>
+
+
+          <div>
+            <strong>💳</strong>
+
+            <span>
+              Pagamento
+              <small>Pix, dinheiro ou cartão</small>
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LOGO PRINCIPAL -->
+
+      <div class="hero-imagem">
+
+        <div class="logo-principal">
+
+          <img
+            src="imagens/logo.jpeg"
+            alt="Logo Bernardes Hamburgueria"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CARDÁPIO
+    ========================================== -->
+
+    <section
+      class="cardapio"
+      id="cardapio"
+    >
+
+      <div class="titulo-secao">
+
+        <span>
+          NOSSO CARDÁPIO
+        </span>
+
+        <h2>
+          Escolha seu favorito
+        </h2>
+
+        <p>
+          Selecione uma categoria e monte seu pedido.
+        </p>
+
+      </div>
+
+
+      <!-- CATEGORIAS -->
+
+      <div class="categorias">
+
+        <button
+          class="categoria ativa"
+          data-categoria="tradicionais"
+          type="button"
+        >
+          🍔 Tradicionais
+        </button>
+
+
+        <button
+          class="categoria"
+          data-categoria="artesanais"
+          type="button"
+        >
+          🔥 Artesanais
+        </button>
+
+
+        <button
+          class="categoria"
+          data-categoria="porcoes"
+          type="button"
+        >
+          🍟 Porções
+        </button>
+
+
+        <button
+          class="categoria"
+          data-categoria="bebidas"
+          type="button"
+        >
+          🥤 Bebidas
+        </button>
+
+
+        <button
+          class="categoria"
+          data-categoria="todos"
+          type="button"
+        >
+          Todos
+        </button>
+
+      </div>
+
+
+      <!-- PRODUTOS GERADOS PELO SCRIPT.JS -->
+
+      <div
+        id="produtos"
+        class="produtos"
+      ></div>
+
+
+      <!-- =========================================
+           AVISO DAS IMAGENS
+      ========================================== -->
+
+      <div class="aviso-imagens">
+
+        <span class="aviso-icone">
+          ⚠️
+        </span>
+
+        <p>
+          <strong>
+            Imagens meramente ilustrativas.
+          </strong>
+
+          Os produtos podem apresentar diferenças
+          em relação às imagens exibidas.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       RODAPÉ / CONTATO
+  ========================================== -->
+
+  <footer
+    class="footer"
+    id="contato"
+  >
+
+    <div class="footer-conteudo">
+
+      <div>
+
+        <h3>
+          BERNARDES
+          <span>BURGER</span>
+        </h3>
+
+        <p>
+          Sabor que representa!
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contato
+        </h4>
+
+        <p>
+          📱 (11) 91852-6711
+        </p>
+
+        <p>
+          📷 @bernardes__26
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Faça seu pedido
+        </h4>
+
+        <a
+          href="https://wa.me/5511918526711"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chamar no WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-final">
+
+      <p>
+        © 2026 Bernardes Burger.
+        Todos os direitos reservados.
+      </p>
+
+      <p class="footer-aviso">
+        Imagens meramente ilustrativas.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
