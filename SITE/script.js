@@ -1,6 +1,6 @@
 // ==========================================================
 // BERNARDES BURGER
-// SCRIPT PRINCIPAL DO SITE
+// SCRIPT PRINCIPAL DO SITE - ATUALIZADO
 // ==========================================================
 
 
